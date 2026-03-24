@@ -73,7 +73,7 @@ const Hero = () => {
             <div className="flex items-center gap-4 pt-4">
               
               <a
-                href="Resume.pdf"
+                href="/Resume.pdf"
                 download
                 className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity"
               >
