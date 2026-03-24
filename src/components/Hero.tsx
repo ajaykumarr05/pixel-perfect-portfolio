@@ -95,18 +95,26 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT IMAGE */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
-              <div className="absolute inset-0 rounded-full border-2 border-primary/30 glow-border" />
-              <img
-                src={profileImg}
-                alt="Ajay Kumar"
-                className="w-full h-full rounded-full object-cover border-2 border-primary/50"
-              />
-            </div>
-          </div>
-        </div>
+          {/* RIGHT SIDE - PREMIUM AK */}
+<div className="flex justify-center lg:justify-end items-center">
+  <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
+
+    {/* 🔥 BACKGROUND BLUR GLOW */}
+    <div className="absolute w-40 h-40 bg-primary/30 blur-3xl rounded-full animate-pulse" />
+
+    {/* 🔄 OUTER ROTATING RING */}
+    <div className="absolute w-full h-full rounded-full border border-primary/30 animate-spin-slow" />
+
+    {/* 🔄 INNER ROTATING RING */}
+    <div className="absolute w-60 h-60 md:w-80 md:h-80 rounded-full border border-primary/20 animate-spin-reverse" />
+
+    {/* 💎 AK TEXT */}
+    <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-primary to-purple-500 text-transparent bg-clip-text z-10 drop-shadow-[0_0_25px_rgba(0,255,150,0.5)]">
+      AK
+    </h1>
+
+  </div>
+</div>
 
         {/* STATS */}
         <div className="flex justify-center gap-16 md:gap-24 mt-16 pt-8 border-t border-border">
