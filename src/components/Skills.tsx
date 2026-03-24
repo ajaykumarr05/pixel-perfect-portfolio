@@ -7,6 +7,11 @@ const iconSkills = [
   { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
   { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
   { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+  { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+  { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+  { name: "Linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+  { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+  { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
 ];
 
 const pillSkills = [
@@ -39,13 +44,20 @@ const Skills = () => {
           <p className="text-muted-foreground mt-3">Technologies I work with</p>
         </div>
 
-        {/* Large icon row */}
-        <div className="flex justify-center gap-8 mb-12 overflow-x-auto pb-4">
-          {iconSkills.map((skill) => (
-            <div key={skill.name} className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl bg-secondary/80 border border-border p-3 flex items-center justify-center hover:border-primary/40 transition-colors">
-              <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" loading="lazy" />
-            </div>
-          ))}
+        {/* Auto-scrolling icon row */}
+        <div className="relative mb-12 overflow-hidden">
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-background to-transparent z-10" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-background to-transparent z-10" />
+          <div className="flex gap-8 animate-scroll-x">
+            {[...iconSkills, ...iconSkills].map((skill, i) => (
+              <div
+                key={`${skill.name}-${i}`}
+                className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl bg-secondary/80 border border-border p-3 flex items-center justify-center hover:border-primary/40 transition-colors"
+              >
+                <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain" loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Skill pills with icons */}
