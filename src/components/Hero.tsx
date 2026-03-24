@@ -8,7 +8,7 @@ const stats = [
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20">
+    <section id="home" className="min-h-screen pt-20">
       
       <div className="container mx-auto px-6 lg:px-12 xl:px-20">
         
@@ -72,17 +72,19 @@ const Hero = () => {
             {/* BUTTONS */}
             <div className="flex items-center gap-4 pt-4">
               
+              {/* DOWNLOAD RESUME */}
               <a
                 href="/Resume.pdf"
-                download
-                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity"
+                download="Ajay_Kumar_Resume.pdf"
+                className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-all hover:scale-105"
               >
                 <Download size={18} />
-                Download CV
+                Download Resume
               </a>
 
+              {/* CONTACT */}
               <a
-                href="mailto:ajaykumaronline.in@gmail.com"
+                href="mailto:ajaykumar.online@gmail.com"
                 className="text-muted-foreground flex items-center gap-2 hover:text-foreground transition-colors"
               >
                 <Mail size={18} />
@@ -91,7 +93,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE - AK */}
+          {/* RIGHT SIDE */}
           <div className="flex justify-center lg:justify-end items-center">
             <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
 
@@ -112,7 +114,7 @@ const Hero = () => {
             </div>
           </div>
 
-        </div> {/* ✅ GRID CLOSED */}
+        </div> {/* GRID CLOSED */}
 
         {/* STATS */}
         <div className="flex justify-center gap-16 md:gap-24 mt-16 pt-8 border-t border-border">
@@ -128,7 +130,8 @@ const Hero = () => {
           ))}
         </div>
 
-      </div>
+      </div> {/* ✅ CONTAINER CLOSED */}
+
     </section>
   );
 };
