@@ -3,31 +3,30 @@ import { Github, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
 
 const projects = [
   {
+    letter: "N",
+    title: "Netflix Clone",
+    desc: "A full-featured Netflix clone with authentication, movie browsing, and responsive UI. Integrated real-time movie data and smooth streaming-like experience.",
+    tags: ["React", "Firebase", "TMDB API", "Tailwind"],
+    github: "https://github.com/yourusername/netflix-clone",
+    live: "https://netflix-clone.vercel.app",
+  },
+  {
+    letter: "S",
+    title: "Student Academic Performance",
+    desc: "A data-driven system to analyze and predict student performance using machine learning techniques with visualization dashboards.",
+    tags: ["Python", "Pandas", "Machine Learning", "Matplotlib"],
+    github: "https://github.com/yourusername/student-performance",
+    live: "", // optional (if not deployed)
+  },
+  {
     letter: "T",
-    title: "TaskFlow Engine",
-    desc: "A distributed task scheduling system built for high-throughput environments.",
-    tags: ["Java", "Redis", "PostgreSQL", "Docker"],
-    github: "https://github.com/yourusername/taskflow",
-    live: "https://taskflow.vercel.app",
-  },
-  {
-    letter: "D",
-    title: "DevBoard",
-    desc: "A real-time collaborative dashboard for development teams with live metrics.",
-    tags: ["React", "Node.js", "MongoDB", "WebSocket"],
-    github: "https://github.com/yourusername/devboard",
-    live: "https://devboard.vercel.app",
-  },
-  {
-    letter: "C",
-    title: "CodeVault",
-    desc: "A secure code snippet manager with syntax highlighting and full-text search.",
-    tags: ["TypeScript", "Next.js", "MySQL", "Tailwind"],
-    github: "https://github.com/yourusername/codevault",
-    live: "https://codevault.vercel.app",
+    title: "Tomato - Food Delivery App",
+    desc: "A full-stack food delivery web app with cart system, order tracking, and responsive UI for seamless user experience.",
+    tags: ["React", "Node.js", "MongoDB", "Express"],
+    github: "https://github.com/yourusername/tomato-app",
+    live: "https://tomato-app.vercel.app",
   },
 ];
-
 const Projects = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
