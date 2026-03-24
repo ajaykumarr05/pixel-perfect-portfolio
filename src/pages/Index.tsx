@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
@@ -14,7 +13,6 @@ const Index = () => {
       <CustomCursor />
       <Navbar />
       <Hero />
-      <About />
       <Skills />
       <Projects />
       <Certifications />

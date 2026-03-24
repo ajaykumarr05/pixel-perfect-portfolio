@@ -28,7 +28,7 @@ const Hero = () => {
             </p>
 
             <div className="flex items-center gap-6 mb-8">
-              <div className="glow-dot" />
+              <span className="glow-dot" />
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Github size={20} /></a>
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Linkedin size={20} /></a>
               <a href="#" className="text-muted-foreground hover:text-foreground transition-colors"><Code size={20} /></a>
@@ -39,7 +39,8 @@ const Hero = () => {
                 <Download size={18} /> Download CV
               </button>
               <button className="text-muted-foreground flex items-center gap-2 hover:text-foreground transition-colors">
-                <Mail size={18} /> Contact Me
+                <span className="glow-dot" />
+                <Mail size={18} /> Get in Touch
               </button>
             </div>
           </div>
