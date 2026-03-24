@@ -1,4 +1,3 @@
-import profileImg from "@/assets/profile.jpg";
 import { Github, Linkedin, Code, Mail, Download } from "lucide-react";
 
 const stats = [
@@ -10,12 +9,13 @@ const stats = [
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-20">
-      {/* ✅ FIXED PADDING */}
+      
       <div className="container mx-auto px-6 lg:px-12 xl:px-20">
+        
+        {/* GRID */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* LEFT */}
-          {/* ✅ LIMIT WIDTH + SPACING */}
           <div className="max-w-xl space-y-4">
             
             <h1 className="text-5xl md:text-7xl font-bold text-foreground font-display">
@@ -23,29 +23,28 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-primary font-semibold">
-              Backend Developer , Machine Learning Engineer
+              Backend Developer, Machine Learning Engineer
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              I'm a passionate <strong className="text-foreground">Computer Science student</strong> at Lovely Professional University, specializing in Backend Development with a strong focus on the MERN stack.
+              I'm a passionate <strong className="text-foreground">Computer Science student</strong> specializing in Backend Development and MERN stack.
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              I love building scalable, efficient applications — from real-time collaborative systems to complex workflows.
+              I love building scalable, efficient applications — from real-time systems to complex workflows.
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
               When I'm not coding, I'm sharpening my <strong className="text-foreground">DSA skills</strong> and building impactful projects.
             </p>
 
-            {/* 🔥 SOCIAL LINKS (DOT REMOVED) */}
+            {/* SOCIAL LINKS */}
             <div className="flex items-center gap-4 pt-2">
               
               <a
                 href="https://github.com/ajaykumarr05"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="GitHub"
                 className="p-2 rounded-full border border-border hover:border-primary hover:text-primary hover:scale-110 transition-all"
               >
                 <Github size={20} />
@@ -55,7 +54,6 @@ const Hero = () => {
                 href="https://www.linkedin.com/in/ajaykumaryadav07/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="LinkedIn"
                 className="p-2 rounded-full border border-border hover:border-primary hover:text-primary hover:scale-110 transition-all"
               >
                 <Linkedin size={20} />
@@ -65,14 +63,13 @@ const Hero = () => {
                 href="https://leetcode.com/u/ajaykumarryadav07/"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="LeetCode"
                 className="p-2 rounded-full border border-border hover:border-primary hover:text-primary hover:scale-110 transition-all"
               >
                 <Code size={20} />
               </a>
             </div>
 
-            {/* 🔥 BUTTONS */}
+            {/* BUTTONS */}
             <div className="flex items-center gap-4 pt-4">
               
               <a
@@ -84,7 +81,6 @@ const Hero = () => {
                 Download CV
               </a>
 
-              {/* ✅ FIXED EMAIL LINK */}
               <a
                 href="mailto:ajaykumaronline.in@gmail.com"
                 className="text-muted-foreground flex items-center gap-2 hover:text-foreground transition-colors"
@@ -95,26 +91,28 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE - PREMIUM AK */}
-<div className="flex justify-center lg:justify-end items-center">
-  <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
+          {/* RIGHT SIDE - AK */}
+          <div className="flex justify-center lg:justify-end items-center">
+            <div className="relative w-72 h-72 md:w-96 md:h-96 flex items-center justify-center">
 
-    {/* 🔥 BACKGROUND BLUR GLOW */}
-    <div className="absolute w-40 h-40 bg-primary/30 blur-3xl rounded-full animate-pulse" />
+              {/* BLUR GLOW */}
+              <div className="absolute w-40 h-40 bg-primary/30 blur-3xl rounded-full animate-pulse" />
 
-    {/* 🔄 OUTER ROTATING RING */}
-    <div className="absolute w-full h-full rounded-full border border-primary/30 animate-spin-slow" />
+              {/* OUTER RING */}
+              <div className="absolute w-full h-full rounded-full border border-primary/30 animate-spin-slow" />
 
-    {/* 🔄 INNER ROTATING RING */}
-    <div className="absolute w-60 h-60 md:w-80 md:h-80 rounded-full border border-primary/20 animate-spin-reverse" />
+              {/* INNER RING */}
+              <div className="absolute w-60 h-60 md:w-80 md:h-80 rounded-full border border-primary/20 animate-spin-reverse" />
 
-    {/* 💎 AK TEXT */}
-    <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-primary to-purple-500 text-transparent bg-clip-text z-10 drop-shadow-[0_0_25px_rgba(0,255,150,0.5)]">
-      AK
-    </h1>
+              {/* AK TEXT */}
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold bg-gradient-to-r from-primary to-purple-500 text-transparent bg-clip-text z-10 drop-shadow-[0_0_25px_rgba(0,255,150,0.5)]">
+                AK
+              </h1>
 
-  </div>
-</div>
+            </div>
+          </div>
+
+        </div> {/* ✅ GRID CLOSED */}
 
         {/* STATS */}
         <div className="flex justify-center gap-16 md:gap-24 mt-16 pt-8 border-t border-border">
