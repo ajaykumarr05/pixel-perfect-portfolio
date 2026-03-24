@@ -10,35 +10,37 @@ const stats = [
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-20">
-      <div className="container mx-auto px-6">
+      {/* ✅ FIXED PADDING */}
+      <div className="container mx-auto px-6 lg:px-12 xl:px-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* LEFT */}
-          <div>
-            <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-2 font-display">
+          {/* ✅ LIMIT WIDTH + SPACING */}
+          <div className="max-w-xl space-y-4">
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-foreground font-display">
               Ajay Kumar
             </h1>
 
-            <p className="text-xl text-primary font-semibold mb-6">
-              ML Engineer |
+            <p className="text-xl text-primary font-semibold">
+              ML Engineer
             </p>
 
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-muted-foreground leading-relaxed">
               I'm a passionate <strong className="text-foreground">Computer Science student</strong> at Lovely Professional University, specializing in Full Stack Web Development with a strong focus on the MERN stack.
             </p>
 
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              I love building scalable, efficient applications — from real-time collaborative coding platforms to civic issue management systems with complex role-based workflows.
+            <p className="text-muted-foreground leading-relaxed">
+              I love building scalable, efficient applications — from real-time collaborative systems to complex workflows.
             </p>
 
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              When I'm not coding, I'm sharpening my <strong className="text-foreground">DSA skills</strong>, exploring new frameworks, or working on meaningful projects that make a difference.
+            <p className="text-muted-foreground leading-relaxed">
+              When I'm not coding, I'm sharpening my <strong className="text-foreground">DSA skills</strong> and building impactful projects.
             </p>
 
-            {/* 🔥 SOCIAL LINKS */}
-            <div className="flex items-center gap-6 mb-8">
-              <span className="glow-dot" />
-
+            {/* 🔥 SOCIAL LINKS (DOT REMOVED) */}
+            <div className="flex items-center gap-4 pt-2">
+              
               <a
                 href="https://github.com/ajaykumarr05"
                 target="_blank"
@@ -71,11 +73,10 @@ const Hero = () => {
             </div>
 
             {/* 🔥 BUTTONS */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 pt-4">
               
-              {/* Resume */}
               <a
-                href="/resume.pdf" // 👉 replace with your resume link
+                href="/resume.pdf"
                 download
                 className="bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold flex items-center gap-2 hover:opacity-90 transition-opacity"
               >
@@ -83,12 +84,11 @@ const Hero = () => {
                 Download CV
               </a>
 
-              {/* Contact */}
+              {/* ✅ FIXED EMAIL LINK */}
               <a
-                href="ajaykumaronline.in@gmail.com" // 👉 replace your email
+                href="mailto:ajaykumaronline.in@gmail.com"
                 className="text-muted-foreground flex items-center gap-2 hover:text-foreground transition-colors"
               >
-                <span className="glow-dot" />
                 <Mail size={18} />
                 Get in Touch
               </a>
