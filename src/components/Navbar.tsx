@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const navItems = ["Home", "About", "Skills", "Projects", "Certifications", "Contact"];
+const navItems = ["Home","Skills", "Projects", "Certifications", "Contact"];
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
