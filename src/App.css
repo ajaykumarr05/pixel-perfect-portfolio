@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 }
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+  transform: scale(1.1);
+}
