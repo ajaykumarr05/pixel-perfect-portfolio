@@ -1,4 +1,5 @@
-import { Award, ExternalLink } from "lucide-react";
+import { Award, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { useRef } from "react";
 
 const certs = [
   { title: "Cloud Computing", org: "NPTEL", date: "Oct' 2025" },
@@ -29,19 +30,52 @@ const education = [
 ];
 
 const Certifications = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (dir: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const amount = 320;
+    scrollRef.current.scrollBy({ left: dir === "left" ? -amount : amount, behavior: "smooth" });
+  };
+
   return (
     <section id="certifications" className="py-24">
       <div className="container mx-auto px-6">
         {/* Certificates */}
         <div className="mb-24">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Certificates</h2>
-          <p className="text-muted-foreground flex items-center gap-2">
-            <span className="glow-dot" /> Professional certifications & achievements
-          </p>
+          <div className="flex items-end justify-between mb-10">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Certificates</h2>
+              <p className="text-muted-foreground flex items-center gap-2">
+                <span className="glow-dot" /> Professional certifications & achievements
+              </p>
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={() => scroll("left")}
+                className="w-10 h-10 rounded-full border border-border bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={() => scroll("right")}
+                className="w-10 h-10 rounded-full border border-border bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-colors"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+          <div
+            ref={scrollRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth pb-4"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
             {certs.map((c) => (
-              <div key={c.title} className="bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-colors relative">
+              <div
+                key={c.title}
+                className="flex-shrink-0 w-72 bg-card rounded-xl p-5 border border-border hover:border-primary/30 transition-colors relative"
+              >
                 <ExternalLink size={14} className="absolute top-4 right-4 text-muted-foreground" />
                 <div className="w-10 h-10 rounded-full bg-primary/20 text-primary flex items-center justify-center mb-3">
                   <Award size={18} />
