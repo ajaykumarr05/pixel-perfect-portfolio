@@ -27,7 +27,7 @@ const Contact = () => {
                 <Mail size={20} className="text-muted-foreground mt-1" />
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider">EMAIL</p>
-                  <p className="text-foreground text-sm">ajaykumaryadav07@gmail.com</p>
+                  <p className="text-foreground text-sm">ajaykumaronline.in@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
