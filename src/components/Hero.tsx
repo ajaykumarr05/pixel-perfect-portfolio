@@ -23,11 +23,11 @@ const Hero = () => {
             </h1>
 
             <p className="text-xl text-primary font-semibold">
-              ML Engineer
+              Backend Developer , Machine Learning Engineer
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
-              I'm a passionate <strong className="text-foreground">Computer Science student</strong> at Lovely Professional University, specializing in Full Stack Web Development with a strong focus on the MERN stack.
+              I'm a passionate <strong className="text-foreground">Computer Science student</strong> at Lovely Professional University, specializing in Backend Development with a strong focus on the MERN stack.
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
