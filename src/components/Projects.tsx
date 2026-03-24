@@ -7,7 +7,7 @@ const projects = [
     title: "Netflix Clone",
     desc: "A full-featured Netflix clone with authentication, movie browsing, and responsive UI. Integrated real-time movie data and smooth streaming-like experience.",
     tags: ["React", "Firebase", "TMDB API", "Tailwind"],
-    github: "https://github.com/yourusername/netflix-clone",
+    github: "https://github.com/ajaykumarr05/Advanced-Edo-Track-Pro.git",
     live: "https://netflix-clone.vercel.app",
   },
   {
@@ -15,7 +15,7 @@ const projects = [
     title: "Student Academic Performance",
     desc: "A data-driven system to analyze and predict student performance using machine learning techniques with visualization dashboards.",
     tags: ["Python", "Pandas", "Machine Learning", "Matplotlib"],
-    github: "https://github.com/yourusername/student-performance",
+    github: "https://github.com/ajaykumarr05/Student-Academic-Performance.git",
     live: "", // optional (if not deployed)
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     title: "Tomato - Food Delivery App",
     desc: "A full-stack food delivery web app with cart system, order tracking, and responsive UI for seamless user experience.",
     tags: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com/yourusername/tomato-app",
+    github: "https://github.com/ajaykumarr05/Mern-Stack.git",
     live: "https://tomato-app.vercel.app",
   },
 ];
