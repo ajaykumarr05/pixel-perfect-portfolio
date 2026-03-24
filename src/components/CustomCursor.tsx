@@ -1,22 +1,39 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 
 const CustomCursor = () => {
-  const [pos, setPos] = useState({ x: -100, y: -100 });
+  const cursorRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const move = (e: MouseEvent) => setPos({ x: e.clientX, y: e.clientY });
+    let mouseX = 0;
+    let mouseY = 0;
+
+    const move = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    };
+
+    const animate = () => {
+      if (cursorRef.current) {
+        cursorRef.current.style.transform = `translate3d(${mouseX - 12}px, ${mouseY - 12}px, 0)`;
+      }
+      requestAnimationFrame(animate);
+    };
+
     window.addEventListener("mousemove", move);
-    return () => window.removeEventListener("mousemove", move);
+    animate();
+
+    return () => {
+      window.removeEventListener("mousemove", move);
+    };
   }, []);
 
   return (
     <div
-      className="pointer-events-none fixed z-[9999] w-6 h-6 rounded-full border-2 border-primary mix-blend-screen"
+      ref={cursorRef}
+      className="pointer-events-none fixed z-[9999] w-6 h-6 rounded-full border-2 border-primary mix-blend-screen will-change-transform"
       style={{
-        left: pos.x - 12,
-        top: pos.y - 12,
-        boxShadow: "0 0 15px hsl(160 100% 50% / 0.6), 0 0 30px hsl(160 100% 50% / 0.3)",
-        transition: "left 0.08s ease-out, top 0.08s ease-out",
+        boxShadow:
+          "0 0 15px hsl(160 100% 50% / 0.6), 0 0 30px hsl(160 100% 50% / 0.3)",
       }}
     />
   );
